@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Tutorial</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Grid with areas defined -->
+    <section class="grid-container">
+        <header class="grid-header-area">
+            <h1>An example of CSS Grid where the elements are spanning across a defined area</h1>
+        </header>
+        <div class="content-area">
+            <span>
+                In this grid structure the content has been made to span across specific grid columns. For example the
+                header element spans across the entire grid <em>(This is a 5 column grid)</em>. The extent of the span
+                is defined in the css grid layout itself. This gives a substantially large amount of control with
+                regards to the placement of the elements. On this page the sidebar on the right or this content area
+                span across 3 grid columns and 2 grid columns respectively, in order to insert a blank space between
+                them or if you want to change the span of the elements then just insert a "." in the <em>grid-template-areas</em>
+                property.
+            </span>
+        </div>
+        <aside class="sidebar">
+            I am a sidebar
+        </aside>
+        <footer class="footer-area">
+            <h1>Footer</h1>
+        </footer>
+    </section>
+
+    <!-- Grid with spacing -->
+    <section class="grid-container-with-gap">
+        <header class="grid-header-area">
+            <h1>An example of CSS Grid with column and row gap</h1>
+        </header>
+        <div class="content-area">
+            <span>
+                In this grid structure I am experimenting with column and row gap that can be used to resemble the
+                gutter width used in frameworks like Bootstrap.
+            </span>
+        </div>
+        <aside class="sidebar">
+            I am a sidebar
+        </aside>
+        <footer class="footer-area">
+            <h1>Footer</h1>
+        </footer>
+    </section>
+
+    <!-- Grid with fr units -->
+    <section class="grid-container-fr">
+        <div class="item-1">
+            Example of a grid with rows and template dimensions are set in fr instead of px or %.
+        </div>
+        <div class="item-2">
+            One drawback of using fr units is that properties like justify-content etc don't work in it.
+        </div>
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+        <div class="item-5"></div>
+        <div class="item-6"></div>
+        <div class="item-7"></div>
+        <div class="item-8"></div>
+        <div class="item-9"></div>
+    </section>
+    <!-- Grid with centered items -->
+    <section class="centered-grid">
+        <div class="vertical-block">
+            <p class="vertical-text">
+                Non aute culpa eiusmod velit ipsum pariatur adipisicing do elit enim aliquip.
+                Deserunt ullamco est irure anim in est. Aliquip esse Lorem qui in duis nulla veniam duis laboris sint
+                tempor nostrud. Eu incididunt proident aliquip ipsum ullamco aliquip reprehenderit aliqua magna enim
+                pariatur.
+            </p>
+        </div>
+        <div class="image-block">
+        </div>
+        <div class="text-block">
+            This a text block
+        </div>
+    </section>
+</body>
+
+</html>

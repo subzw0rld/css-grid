@@ -1,0 +1,137 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.grid-container,
+.grid-container-with-gap {
+    border: 1px solid #000;
+    display: grid;
+    font-size: 2rem;
+    grid-template-columns: 40px 50px auto 50px 40px;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: "header header header header header" "main main main sidebar sidebar" "footer footer footer footer footer";
+    height: 500px;
+}
+
+.grid-container-with-gap {
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    /* grid-gap: 5px 5px;  Shorthand for above statement */
+}
+
+.grid-header-area {
+    background-color: #C1666B;
+    font-size: 2.4rem;
+    grid-area: header;
+    justify-items: center;
+    text-align: center;
+}
+
+.content-area {
+    background-color: #FAF0CA;
+    grid-area: main;
+    padding: 0.5rem;
+    text-align: justify;
+}
+
+.sidebar {
+    background-color: #F95738;
+    ;
+    grid-area: sidebar;
+    padding: 0.5rem;
+}
+
+.footer-area {
+    background-color: #0D3B66;
+    color: #FFF;
+    grid-area: footer;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.grid-container-fr {
+    border: 1px solid #000;
+    display: grid;
+    font-size: 1.3rem;
+    grid-gap: 5px 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 3rem;
+    padding: 1rem;
+    height: 500px;
+}
+
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5,
+.item-6,
+.item-7,
+.item-8,
+.item-9 {
+    border: 1px dashed #333;
+    height: 100%;
+    width: 100%;
+}
+
+.centered-grid {
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-areas: "vertical-block . text-block" "vertical-block image ." "vertical-block . .";
+    align-content: center;
+    justify-content: center;
+    margin-top: 3rem;
+    height: 500px;
+}
+
+.vertical-block,
+.image-block,
+.text-block {
+    border: 1px dashed #333;
+}
+
+.vertical-block {
+    grid-area: vertical-block;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.vertical-block .vertical-text {
+    font-weight: bold;
+    transform: rotate(-90deg) translate(-50%, 0);
+    /* transform-origin: left bottom; */
+    /* writing-mode: vertical-lr;
+    text-orientation: mixed; */
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 350px;
+    text-align: justify;
+}
+
+.image-block {
+    background: url(../assets/images/Cube-House.jpg) no-repeat;
+    background-size: cover;
+    grid-area: image;
+}
+
+.text-block {
+    background-color: #4C5B5C;
+    border-color: #FFF;
+    color: #FFF;
+    grid-area: text-block;
+    text-align: center;
+    padding: 7rem 0;
+}
